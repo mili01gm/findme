@@ -5,16 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Find Me!</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <div id="mapa">
 
-    </div>
+    <section class="container-fluid adress-bar">
+        <div class="row">
+          <div class="form-inline col-xs-12 col-md-12">
+            <div class="form-group input-group col-xs-11 col-md-4">
+                <span class="input-group-addon img-rounded glyphicon glyphicon-record"></span>
+                <input type="text" class="form-control img-rounded" id="partida" placeholder="Where are you?">
+            </div>
+            <div class="form-group input-group col-xs-11 col-md-4">
+              <span class="input-group-addon glyphicon glyphicon-map-marker"></span>
+              <input type="text" class="form-control img-rounded" id="llegada" placeholder="Where to?">
+            </div>
+            <div class="form-group input-group col-xs-5 col-md-2 text-center">
+              <button type="submit" id="trazar-ruta" class="btn btn-default">Show me the way</button>
+            </div>
+            <div class="form-group input-group col-xs-5 col-md-1 text-center">
+              <button type="submit" id="encuentrame" class="btn btn-default">Find me</button>
+            </div>
+          </div>
+        </div>
+    </section>
 
-    <button id="encuentrame">Find me!</button>
+    <section class="container-fluid">
+      <div class="row">
+        <div id="mapa" class="col-md-12"></div>
+				<div class="row">
+					<div id="tarifa" class="none div-price col-xs-12 col-sm-2 col-sm-push-10"></div>
+        </div>
+      </div>
+    </section>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrHes4ltO64jvQqDtwIlPjQFsuVGWHrQU&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrHes4ltO64jvQqDtwIlPjQFsuVGWHrQU&callback=initMap&libraries=places"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
