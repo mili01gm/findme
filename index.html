@@ -10,34 +10,29 @@
 </head>
 <body>
 
-    <section class="container-fluid adress-bar">
-        <div class="row">
-          <div class="form-inline col-xs-12 col-md-12">
-            <div class="form-group input-group col-xs-11 col-md-4">
-                <span class="input-group-addon img-rounded glyphicon glyphicon-record"></span>
-                <input type="text" class="form-control img-rounded" id="partida" placeholder="Where are you?">
+    <section class="container-fluid">
+				<div id="tarifa" class="none div-price col-xs-12 col-sm-2 col-sm-push-10"></div>
+        <div class="row header">
+          <div class="form-inline col-xs-12">
+            <div class="form-group col-xs-12 col-sm-12 col-md-4 text-center">
+									<i class="glyphicon glyphicon-record"></i>
+									<input type="text" class="form-control" id="partida" placeholder="Where are you?">
             </div>
-            <div class="form-group input-group col-xs-11 col-md-4">
-              <span class="input-group-addon glyphicon glyphicon-map-marker"></span>
-              <input type="text" class="form-control img-rounded" id="llegada" placeholder="Where to?">
+            <div class="form-group col-xs-12 col-sm-12 col-md-4 text-center">
+									<i class="glyphicon glyphicon-map-marker"></i>
+									<input type="text" class="form-control" id="llegada" placeholder="Where to?">
             </div>
-            <div class="form-group input-group col-xs-5 col-md-2 text-center">
-              <button type="submit" id="trazar-ruta" class="btn btn-default">Show me the way</button>
+            <div class="form-group col-xs-6 col-sm-6 col-md-2 text-center">
+              <button type="submit" id="trazar-ruta" class="btn btn-default btn-md">Show me the way</button>
             </div>
-            <div class="form-group input-group col-xs-5 col-md-1 text-center">
-              <button type="submit" id="encuentrame" class="btn btn-default">Find me</button>
+            <div class="form-group col-xs-6 col-sm-6 col-md-2 text-center">
+              <button type="submit" id="encuentrame" class="btn btn-default btn-md">Find me</button>
             </div>
           </div>
         </div>
-    </section>
-
-    <section class="container-fluid">
-      <div class="row">
-        <div id="mapa" class="col-md-12"></div>
 				<div class="row">
-					<div id="tarifa" class="none div-price col-xs-12 col-sm-2 col-sm-push-10"></div>
-        </div>
-      </div>
+	        <div id="mapa" class="col-md-12"></div>
+	      </div>
     </section>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrHes4ltO64jvQqDtwIlPjQFsuVGWHrQU&callback=initMap&libraries=places"></script>
